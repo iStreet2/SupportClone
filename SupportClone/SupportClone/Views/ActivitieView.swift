@@ -9,7 +9,30 @@ import SwiftUI
 
 struct ActivitieView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            GeometryReader { geometry in
+                ScrollView {
+                    VStack {
+                        Image(systemName: "clock.fill")
+                            .font(.largeTitle)
+                        VStack {
+                            Text("No support acitivity in the past")
+                            Text("90 day")
+                        }
+                        .font(.title2).bold()
+                        
+                        VStack {
+                            Text("Past and upcoming reservations, calls, and chats")
+                            Text("with Apple Support will appear here")
+                        }
+                        .foregroundColor(.gray)
+                    }
+                    .navigationTitle("Recent Activity")
+                    .frame(width: geometry.size.width)
+                    .frame(minHeight: geometry.size.height)
+                }
+            }
+        }
     }
 }
 
