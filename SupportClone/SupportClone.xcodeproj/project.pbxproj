@@ -13,6 +13,9 @@
 		3BC2CB302A8A955800F8B0F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2CB2F2A8A955800F8B0F4 /* Preview Assets.xcassets */; };
 		3BF1F55B2A8A9B44006CCCB1 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1F55A2A8A9B44006CCCB1 /* LocationsView.swift */; };
 		3BF1F55D2A8A9B51006CCCB1 /* ActivitieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1F55C2A8A9B51006CCCB1 /* ActivitieView.swift */; };
+		3BFCAB9B2A8BF13900C0B8BB /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFCAB9A2A8BF13900C0B8BB /* Device.swift */; };
+		3BFCAB9E2A8BF18D00C0B8BB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFCAB9D2A8BF18D00C0B8BB /* ViewModel.swift */; };
+		3BFCABA32A8BF1E200C0B8BB /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFCABA22A8BF1E200C0B8BB /* Devices.swift */; };
 		641561412A8BE98F00BA82D1 /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641561402A8BE98F00BA82D1 /* SupportView.swift */; };
 		641561432A8BE99900BA82D1 /* MyDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641561422A8BE99900BA82D1 /* MyDevicesView.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +28,9 @@
 		3BC2CB2F2A8A955800F8B0F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3BF1F55A2A8A9B44006CCCB1 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		3BF1F55C2A8A9B51006CCCB1 /* ActivitieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitieView.swift; sourceTree = "<group>"; };
+		3BFCAB9A2A8BF13900C0B8BB /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		3BFCAB9D2A8BF18D00C0B8BB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		3BFCABA22A8BF1E200C0B8BB /* Devices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Devices.swift; sourceTree = "<group>"; };
 		641561402A8BE98F00BA82D1 /* SupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportView.swift; sourceTree = "<group>"; };
 		641561422A8BE99900BA82D1 /* MyDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDevicesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +65,9 @@
 		3BC2CB272A8A955700F8B0F4 /* SupportClone */ = {
 			isa = PBXGroup;
 			children = (
+				3BFCABA12A8BF1D900C0B8BB /* DataService */,
+				3BFCAB9C2A8BF18300C0B8BB /* ViewModel */,
+				3BFCAB992A8BF12F00C0B8BB /* Model */,
 				3BF1F55E2A8A9B84006CCCB1 /* Views */,
 				3BC2CB282A8A955700F8B0F4 /* SupportCloneApp.swift */,
 				3BC2CB2A2A8A955700F8B0F4 /* ContentView.swift */,
@@ -92,6 +101,30 @@
 				3BF1F55C2A8A9B51006CCCB1 /* ActivitieView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3BFCAB992A8BF12F00C0B8BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3BFCAB9A2A8BF13900C0B8BB /* Device.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3BFCAB9C2A8BF18300C0B8BB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3BFCAB9D2A8BF18D00C0B8BB /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3BFCABA12A8BF1D900C0B8BB /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				3BFCABA22A8BF1E200C0B8BB /* Devices.swift */,
+			);
+			path = DataService;
 			sourceTree = "<group>";
 		};
 		6415613F2A8BE97600BA82D1 /* SupportViews */ = {
@@ -175,9 +208,12 @@
 			files = (
 				641561412A8BE98F00BA82D1 /* SupportView.swift in Sources */,
 				641561432A8BE99900BA82D1 /* MyDevicesView.swift in Sources */,
+				3BFCABA32A8BF1E200C0B8BB /* Devices.swift in Sources */,
 				3BF1F55B2A8A9B44006CCCB1 /* LocationsView.swift in Sources */,
 				3BC2CB2B2A8A955700F8B0F4 /* ContentView.swift in Sources */,
 				3BC2CB292A8A955700F8B0F4 /* SupportCloneApp.swift in Sources */,
+				3BFCAB9B2A8BF13900C0B8BB /* Device.swift in Sources */,
+				3BFCAB9E2A8BF18D00C0B8BB /* ViewModel.swift in Sources */,
 				3BF1F55D2A8A9B51006CCCB1 /* ActivitieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
