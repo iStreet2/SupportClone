@@ -9,10 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            ActivitieView()
+        TabView{
+            Group{
+                SupportView()
+                    .tabItem {
+                        Image(systemName: "square.grid.2x2.fill")
+                        Text("Support")
+                    }
+                LocationsView()
+                    .tabItem {
+                        Image(systemName: "mappin.and.ellipse")
+                        Text("Locations")
+                    }
+                ActivitieView()
+                    .tabItem{
+                        Image(systemName: "clock")
+                        Text("Activity")
+                    }
+            }
+            .toolbarBackground(.visible, for: .tabBar)
+            .toolbarBackground(.ultraThinMaterial, for: .tabBar)
         }
-        .padding()
+        
+
     }
 }
 
