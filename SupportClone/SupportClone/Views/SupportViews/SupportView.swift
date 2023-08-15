@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SupportView: View {
+    @EnvironmentObject var vm: ViewModel
     @State var showingSheetHelp = false
     @State var showingSheetDevices = false
     @State var showingSheetDevices_iPhone = false
@@ -49,51 +50,39 @@ struct SupportView: View {
                             Text("My Devices")
                                 .fontWeight(.semibold)
                             Image(systemName: "chevron.right")
+                                .foregroundColor(.gray)
+                                .font(.system(size:16))
+                                .bold()
                         }
                         .font(.title2)
-                        .foregroundColor(Color("TextColor"))
+                        .foregroundColor(Color("Text"))
                     }
-                    Button {
-                        showingSheetDevices_Mac.toggle()
-                    } label: {
-                        HStack {
-                            ZStack {
-                                // TODO: NavigationLink
-                                RoundedRectangle(cornerRadius: 10)
-                                    .frame(width: 180, height: 180)
-                                    .foregroundColor(Color("SquaresBG"))
+                    HStack {
+                        ForEach(0 ..< vm.devices.count, id:\.self){ index in
+                            NavigationLink {
+                                MyDevicesView(pos: index)
+                            } label: {
                                 
-                                VStack {
-                                    Image("iPhone")
-                                        .resizable()
-                                        .frame(width: 50, height: 100)
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .frame(width: 180, height: 180)
+                                        .foregroundColor(Color("SquaresBG"))
                                     
-                                    Text("iPhone de XXX")
-                                        .foregroundColor(Color("TextColor"))
-                                    Text("This iPhone 13")
-                                        .foregroundColor(.gray)
-                                }
-                            }
-                            
-                            // TODO: NavigationLink
-                            ZStack {
-                                // TODO: NavigationLink
-                                RoundedRectangle(cornerRadius: 10)
-                                    .frame(width: 180, height: 180)
-                                    .foregroundColor(Color("SquaresBG"))
-                                
-                                VStack {
-                                    Image("Mac")
-                                        .resizable()
-                                        .frame(width: 140, height: 90)
-                                    
-                                    Text("Mac de XXX")
-                                        .foregroundColor(Color("TextColor"))
-                                    Text("MacBook Pro 14''")
-                                        .foregroundColor(.gray)
+                                    VStack {
+                                        Image(vm.devices[index].image)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(height: 100)
+                                        
+                                        Text(vm.devices[index].name)
+                                            .foregroundColor(Color("TextColor"))
+                                        Text(vm.devices[index].deviceName)
+                                            .foregroundColor(.gray)
+                                    }
                                 }
                             }
                         }
+                        
                     }
                     
                     Divider()
@@ -200,5 +189,6 @@ struct SupportView: View {
 struct SupportView_Previews: PreviewProvider {
     static var previews: some View {
         SupportView()
+            .environmentObject(ViewModel())
     }
 }
