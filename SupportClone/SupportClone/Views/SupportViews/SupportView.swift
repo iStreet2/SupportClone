@@ -13,6 +13,7 @@ struct SupportView: View {
     @State var showingSheetDevices_iPhone = false
     @State var showingSheetDevices_Mac = false
     @State var showingSheetSubscriptions = false
+    @State var showingSeetServices = false
     
     var body: some View {
         NavigationStack {
@@ -108,61 +109,88 @@ struct SupportView: View {
                         Image(systemName: "chevron.right")
                     }
                     
-//                  Menage Subscription Button
+                    //                  Menage Subscription Button
                     Button {
                         showingSheetSubscriptions.toggle()
                     } label: {
-                            HStack {
-                                Image(systemName: "calendar.badge.plus")
-                                    .renderingMode(.original)
-                                    .foregroundColor(.red)
-                                    .font(.largeTitle)
-                                Text("Manage Subscriptions")
-                                Spacer()
-                            }
-                            .padding(.leading, 24)
-                            .frame(width: 360, height: 60)
-                            .background(Color("SquaresBG"))
-                            .cornerRadius(10)
+                        HStack {
+                            Image(systemName: "calendar.badge.plus")
+                                .renderingMode(.original)
+                                .foregroundColor(.red)
+                                .font(.largeTitle)
+                            Text("Manage Subscriptions")
+                                .foregroundColor(Color("TextColor"))
+                            Spacer()
+                        }
+                        .padding(.leading, 24)
+                        .frame(width: 360, height: 70)
+                        .background(Color("SquaresBG"))
+                        .cornerRadius(10)
                     }
                     
-//                  Reset Password Button
+                    //                  Reset Password Button
                     Button {
                         showingSheetSubscriptions.toggle()
                     } label: {
-                            HStack {
-                                Image(systemName: "rectangle.and.pencil.and.ellipsis")
-                                    .renderingMode(.original)
-                                    .foregroundColor(Color(.systemPink))
-                                    .font(.largeTitle)
-                                Text("Reset Password")
-                                Spacer()
-                            }
-                            .padding(.leading, 24)
-                            .frame(width: 360, height: 60)
-                            .background(Color("SquaresBG"))
-                            .cornerRadius(10)
+                        HStack {
+                            Image(systemName: "rectangle.and.pencil.and.ellipsis")
+                                .renderingMode(.original)
+                                .foregroundColor(Color(.systemBlue))
+                                .font(.title)
+                            Text("Reset Password")
+                                .foregroundColor(Color("TextColor"))
+                            Spacer()
+                        }
+                        .padding(.leading, 24)
+                        .frame(width: 360, height: 70)
+                        .background(Color("SquaresBG"))
+                        .cornerRadius(10)
                     }
                     
-//                  Check coverage But
+                    //                  Check coverage But
                     Button {
                         showingSheetSubscriptions.toggle()
                     } label: {
-                            HStack {
-                                Image(systemName: "calendar.badge.plus")
-                                    .renderingMode(.original)
-                                    .foregroundColor(Color(.systemPink))
-                                    .font(.largeTitle)
-                                Text("Cheeck Coverage")
-                                Spacer()
-                            }
-                            .padding(.leading, 24)
-                            .frame(width: 360, height: 60)
-                            .background(Color("SquaresBG"))
-                            .cornerRadius(10)
+                        HStack {
+                            Image(systemName: "apple.logo")
+                                .renderingMode(.original)
+                                .foregroundColor(Color(.systemRed))
+                                .font(.largeTitle)
+                                .frame(width: 50, height: 50)
+                                .background(Color("AppleLogoBG"))
+                                .cornerRadius(10)
+                            Text("Cheeck Coverage")
+                                .foregroundColor(Color("TextColor"))
+                            Spacer()
+                        }
+                        .padding(.leading, 24)
+                        .frame(width: 360, height: 70)
+                        .background(Color("SquaresBG"))
+                        .cornerRadius(10)
                     }
                 }
-            
+                
+                Divider()
+                    .padding(.horizontal)
+                    .padding(.top, 5)
+                
+                VStack {
+                    Button {
+                        showingSeetServices.toggle()
+                    } label: {
+                        HStack {
+                            Text("My Services")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color("TextColor"))
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color("TextColor"))
+                            Spacer()
+                        }.padding(.leading)
+                    }
+                    
+                    
+                }
             }
             .navigationTitle("Support")
         }
