@@ -8,9 +8,7 @@
 import SwiftUI
 
 @main
-struct SupportCloneApp: App {
-    @StateObject var vm = ViewModel()
-    
+struct SupportCloneApp: App {    
     var body: some Scene {
         WindowGroup {
             ContentView()

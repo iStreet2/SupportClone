@@ -10,6 +10,7 @@ import MapKit
 
 struct LocationsView: View {
     @State private var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -23.54757, longitude: -46.65025), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+    
     var body: some View {
         GeometryReader{ geometry in
             NavigationView{
@@ -31,7 +32,7 @@ struct LocationsView: View {
                         })
                         Spacer()
                         Button (action: {
-                            
+
                         }, label: {
                             ZStack{
                                 RoundedRectangle(cornerRadius: 5)
