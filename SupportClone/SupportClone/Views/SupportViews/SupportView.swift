@@ -188,7 +188,7 @@ struct SupportView: View {
                                 .font(.largeTitle)
                                 .frame(width: 55, height: 55)
                                 .foregroundColor(Color(.systemBlue))
-                                .background(.black)
+                                .background(.white)
                                 .cornerRadius(15)
                                 .padding(.horizontal)
                             Text("iCloud")
