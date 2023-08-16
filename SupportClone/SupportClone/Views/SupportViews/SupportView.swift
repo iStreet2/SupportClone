@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SupportView: View {
     @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var pm: ProductsViewModel
+    
     @State var showingSheetHelp = false
     @State var showingSheetDevices = false
     @State var showingSheetDevices_iPhone = false
@@ -163,7 +165,7 @@ struct SupportView: View {
                     .padding(.horizontal)
                     .padding(.top, 5)
                 
-                VStack {
+                VStack(alignment: .leading) {
                     Button {
                         showingSeetServices.toggle()
                     } label: {
@@ -177,8 +179,53 @@ struct SupportView: View {
                             Spacer()
                         }.padding(.leading)
                     }
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color("SquaresBG"))
+                            .frame(width: 200, height: 140)
+                        VStack {
+                            Image(systemName: "icloud.fill")
+                                .font(.largeTitle)
+                                .frame(width: 55, height: 55)
+                                .foregroundColor(Color(.systemBlue))
+                                .background(.black)
+                                .cornerRadius(15)
+                                .padding(.horizontal)
+                            Text("iCloud")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color("TextColor"))
+                            Text("1,84 GB de 5 GB usados")
+                                .foregroundColor(.gray)
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+                
+                Divider()
+                    .padding(.horizontal)
+                
+                VStack {
+                    HStack {
+                        Text("More Products")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("TextColor"))
+                        Image(systemName: "chevron.right")
+                        
+                        Spacer()
+                    }.padding(.leading)
                     
                     
+                    ScrollView(.horizontal){
+                        HStack {
+                            ForEach(pm.products.indices, id: \.self) { index in
+                                Image(pm.products[index].prod)
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                            }
+                        }
+                    }
                 }
             }
             .navigationTitle("Support")
@@ -190,5 +237,6 @@ struct SupportView_Previews: PreviewProvider {
     static var previews: some View {
         SupportView()
             .environmentObject(ViewModel())
+            .environmentObject(ProductsViewModel())
     }
 }
