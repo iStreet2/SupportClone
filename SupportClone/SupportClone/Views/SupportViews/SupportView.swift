@@ -220,9 +220,21 @@ struct SupportView: View {
                     ScrollView(.horizontal){
                         HStack {
                             ForEach(pm.products.indices, id: \.self) { index in
-                                Image(pm.products[index].prod)
-                                    .resizable()
-                                    .frame(width: 100, height: 100)
+                                VStack(spacing: 0) {
+                                    Image(pm.products[index].prod)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 117, height: 55)
+                                        
+                                        .padding(.leading, 5)
+                                    
+                                    Text(pm.products[index].prodName)
+                                        .padding(.bottom, 15)
+                                        .font(.title3)
+                                        .fontWeight(.semibold)
+                                }
+                                .background(Color("SquaresBG"))
+                                .cornerRadius(15)
                             }
                         }
                     }
