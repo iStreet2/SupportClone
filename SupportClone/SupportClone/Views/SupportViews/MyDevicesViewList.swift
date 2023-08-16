@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct MyDevicesView: View {
+struct MyDevicesViewList: View {
     @EnvironmentObject var vm : ViewModel
     @Environment(\.defaultMinListRowHeight) var rowHeight
     var pos: Int
     
     var body: some View {
         NavigationView{
-            ScrollView{
+            List{
                 VStack{
                     VStack(spacing:0){
                         Image(vm.devices[pos].image)
@@ -61,47 +61,35 @@ struct MyDevicesView: View {
                             .foregroundColor(.gray)
                         }
                         .padding()
-                        .background(Color("SquaresBG2"))
+                        .background(Color("SquaresBG"))
                         .cornerRadius(10)
                         
                     }
-                    .padding(.horizontal)
-//                    List{
-                    ZStack{
-                        RoundedRectangle(cornerRadius:10)
-                            .foregroundColor(Color("SquaresBG2"))
-                        VStack{
-                            ForEach(0 ..< vm.supportTopics.count, id: \.self){ index in
-                                Button {
-                                    
-                                } label: {
-                                    HStack{
-                                        Image(systemName: vm.supportTopics[index].image)
-                                            .foregroundColor(vm.supportTopics[index].color)
-                                            .font(.system(size:25))
-                                        Text(vm.supportTopics[index].name)
-                                        Spacer()
-                                        Image(systemName: "chevron.right")
-                                            .font(.system(size:12).weight(.light))
-                                    }
-                                }
-                                .foregroundColor(Color("Text"))
-                                .padding(10)
-                                Divider()
-                                
+                    
+                    ForEach(0 ..< vm.supportTopics.count, id: \.self){ index in
+                        Button {
+                            
+                        } label: {
+                            HStack{
+                                Image(systemName: vm.supportTopics[index].image)
+                                    .foregroundColor(vm.supportTopics[index].color)
+                                    .font(.system(size:25))
+                                Text(vm.supportTopics[index].name)
+                                Spacer()
+                                Image(systemName: "chevron.right")
+                                    .font(.system(size:12).weight(.light))
                             }
                         }
+                        .foregroundColor(Color("Text"))
+                        
                     }
                     .padding()
-//                    }
-//                    .frame(height: rowHeight * CGFloat(vm.supportTopics.count) + 1 + 150)
-//                    .scrollDisabled(true)
-//                    .border(.red)
                 }
                 
                 
             }
-            .background(Color("background"))
+            .listStyle(.grouped)
+            
         }
         
         
@@ -109,9 +97,9 @@ struct MyDevicesView: View {
     }
 }
 
-struct MyDevicesView_Previews: PreviewProvider {
+struct MyDevicesViewList_Previews: PreviewProvider {
     static var previews: some View {
-        MyDevicesView(pos: 0)
+        MyDevicesViewList(pos: 0)
             .environmentObject(ViewModel())
     }
 }

@@ -13,6 +13,7 @@
 		3BC2CB2B2A8A955700F8B0F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC2CB2A2A8A955700F8B0F4 /* ContentView.swift */; };
 		3BC2CB2D2A8A955800F8B0F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2CB2C2A8A955800F8B0F4 /* Assets.xcassets */; };
 		3BC2CB302A8A955800F8B0F4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BC2CB2F2A8A955800F8B0F4 /* Preview Assets.xcassets */; };
+		3BD3A2FE2A8D444900495F95 /* MyDevicesViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD3A2FD2A8D444900495F95 /* MyDevicesViewList.swift */; };
 		3BF1F55B2A8A9B44006CCCB1 /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1F55A2A8A9B44006CCCB1 /* LocationsView.swift */; };
 		3BF1F55D2A8A9B51006CCCB1 /* ActivitieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BF1F55C2A8A9B51006CCCB1 /* ActivitieView.swift */; };
 		3BFCAB9B2A8BF13900C0B8BB /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BFCAB9A2A8BF13900C0B8BB /* Device.swift */; };
@@ -30,6 +31,7 @@
 		3BC2CB2A2A8A955700F8B0F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3BC2CB2C2A8A955800F8B0F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BC2CB2F2A8A955800F8B0F4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3BD3A2FD2A8D444900495F95 /* MyDevicesViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDevicesViewList.swift; sourceTree = "<group>"; };
 		3BF1F55A2A8A9B44006CCCB1 /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
 		3BF1F55C2A8A9B51006CCCB1 /* ActivitieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitieView.swift; sourceTree = "<group>"; };
 		3BFCAB9A2A8BF13900C0B8BB /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				641561402A8BE98F00BA82D1 /* SupportView.swift */,
 				641561422A8BE99900BA82D1 /* MyDevicesView.swift */,
+				3BD3A2FD2A8D444900495F95 /* MyDevicesViewList.swift */,
 			);
 			path = SupportViews;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				3BF1F55B2A8A9B44006CCCB1 /* LocationsView.swift in Sources */,
 				3BC2CB2B2A8A955700F8B0F4 /* ContentView.swift in Sources */,
 				3BAC35DA2A8C06F3008F8E46 /* SupportTopics.swift in Sources */,
+				3BD3A2FE2A8D444900495F95 /* MyDevicesViewList.swift in Sources */,
 				3BC2CB292A8A955700F8B0F4 /* SupportCloneApp.swift in Sources */,
 				3BFCAB9B2A8BF13900C0B8BB /* Device.swift in Sources */,
 				3BAC35D82A8C06AE008F8E46 /* SupportTopic.swift in Sources */,
