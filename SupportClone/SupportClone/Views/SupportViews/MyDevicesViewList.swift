@@ -66,15 +66,15 @@ struct MyDevicesViewList: View {
                         
                     }
                     
-                    ForEach(0 ..< vm.supportTopics.count, id: \.self){ index in
+                    ForEach(0 ..< vm.supportTopicsiPhone.count, id: \.self){ index in
                         Button {
                             
                         } label: {
                             HStack{
-                                Image(systemName: vm.supportTopics[index].image)
-                                    .foregroundColor(vm.supportTopics[index].color)
+                                Image(systemName: vm.supportTopicsiPhone[index].image)
+                                    .foregroundColor(vm.supportTopicsiPhone[index].color)
                                     .font(.system(size:25))
-                                Text(vm.supportTopics[index].name)
+                                Text(vm.supportTopicsiPhone[index].name)
                                 Spacer()
                                 Image(systemName: "chevron.right")
                                     .font(.system(size:12).weight(.light))

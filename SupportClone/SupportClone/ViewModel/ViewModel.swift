@@ -11,11 +11,13 @@ import Foundation
 class ViewModel: ObservableObject{
     
     @Published var devices: [Device]
-    @Published var supportTopics: [SupportTopic]
+    @Published var supportTopicsiPhone: [SupportTopic]
+    @Published var products: [Product]
     
     init(){
         self.devices = Devices.devices
-        self.supportTopics = SupportTopics.supportTopics
+        self.supportTopicsiPhone = SupportTopics.supportTopicsiPhone
+        self.products = Products.products
     }
     
     

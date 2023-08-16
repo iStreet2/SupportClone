@@ -10,12 +10,10 @@ import SwiftUI
 @main
 struct SupportCloneApp: App {
     @StateObject var vm = ViewModel()
-    @StateObject var pm = ProductsViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(vm)
-                .environmentObject(pm)
         }
     }
 }

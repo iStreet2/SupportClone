@@ -9,7 +9,6 @@ import SwiftUI
 
 struct SupportView: View {
     @EnvironmentObject var vm: ViewModel
-    @EnvironmentObject var pm: ProductsViewModel
     
     @State var showingSheetHelp = false
     @State var showingSheetDevices = false
@@ -219,16 +218,16 @@ struct SupportView: View {
                     
                     ScrollView(.horizontal){
                         HStack {
-                            ForEach(pm.products.indices, id: \.self) { index in
+                            ForEach(vm.products.indices, id: \.self) { index in
                                 VStack(spacing: 0) {
-                                    Image(pm.products[index].prod)
+                                    Image(vm.products[index].prod)
                                         .resizable()
                                         .scaledToFit()
                                         .frame(width: 117, height: 55)
                                         
                                         .padding(.leading, 5)
                                     
-                                    Text(pm.products[index].prodName)
+                                    Text(vm.products[index].prodName)
                                         .padding(.bottom, 15)
                                         .font(.title3)
                                         .fontWeight(.semibold)
@@ -249,6 +248,5 @@ struct SupportView_Previews: PreviewProvider {
     static var previews: some View {
         SupportView()
             .environmentObject(ViewModel())
-            .environmentObject(ProductsViewModel())
     }
 }

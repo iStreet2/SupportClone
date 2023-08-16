@@ -23,7 +23,6 @@
 		641561432A8BE99900BA82D1 /* MyDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641561422A8BE99900BA82D1 /* MyDevicesView.swift */; };
 		64CD78942A8C122D002278C2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD78932A8C122D002278C2 /* Product.swift */; };
 		64CD78962A8C12C6002278C2 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD78952A8C12C6002278C2 /* Products.swift */; };
-		64CD78982A8C1582002278C2 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64CD78972A8C1582002278C2 /* ProductsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +43,6 @@
 		641561422A8BE99900BA82D1 /* MyDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDevicesView.swift; sourceTree = "<group>"; };
 		64CD78932A8C122D002278C2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		64CD78952A8C12C6002278C2 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
-		64CD78972A8C1582002278C2 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				3BFCAB9A2A8BF13900C0B8BB /* Device.swift */,
-
 				64CD78932A8C122D002278C2 /* Product.swift */,
-
 				3BAC35D72A8C06AE008F8E46 /* SupportTopic.swift */,
-
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				3BFCAB9D2A8BF18D00C0B8BB /* ViewModel.swift */,
-				64CD78972A8C1582002278C2 /* ProductsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -141,11 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				3BFCABA22A8BF1E200C0B8BB /* Devices.swift */,
-
 				64CD78952A8C12C6002278C2 /* Products.swift */,
-
 				3BAC35D92A8C06F3008F8E46 /* SupportTopics.swift */,
-
 			);
 			path = DataService;
 			sourceTree = "<group>";
@@ -234,18 +225,14 @@
 				64CD78962A8C12C6002278C2 /* Products.swift in Sources */,
 				641561432A8BE99900BA82D1 /* MyDevicesView.swift in Sources */,
 				3BFCABA32A8BF1E200C0B8BB /* Devices.swift in Sources */,
-				64CD78982A8C1582002278C2 /* ProductsViewModel.swift in Sources */,
 				3BF1F55B2A8A9B44006CCCB1 /* LocationsView.swift in Sources */,
 				3BC2CB2B2A8A955700F8B0F4 /* ContentView.swift in Sources */,
 				3BAC35DA2A8C06F3008F8E46 /* SupportTopics.swift in Sources */,
 				3BD3A2FE2A8D444900495F95 /* MyDevicesViewList.swift in Sources */,
 				3BC2CB292A8A955700F8B0F4 /* SupportCloneApp.swift in Sources */,
 				3BFCAB9B2A8BF13900C0B8BB /* Device.swift in Sources */,
-
 				64CD78942A8C122D002278C2 /* Product.swift in Sources */,
-
 				3BAC35D82A8C06AE008F8E46 /* SupportTopic.swift in Sources */,
-
 				3BFCAB9E2A8BF18D00C0B8BB /* ViewModel.swift in Sources */,
 				3BF1F55D2A8A9B51006CCCB1 /* ActivitieView.swift in Sources */,
 			);

@@ -66,20 +66,19 @@ struct MyDevicesView: View {
                         
                     }
                     .padding(.horizontal)
-//                    List{
                     ZStack{
                         RoundedRectangle(cornerRadius:10)
                             .foregroundColor(Color("SquaresBG2"))
                         VStack{
-                            ForEach(0 ..< vm.supportTopics.count, id: \.self){ index in
+                            ForEach(0 ..< vm.supportTopicsiPhone.count, id: \.self){ index in
                                 Button {
                                     
                                 } label: {
                                     HStack{
-                                        Image(systemName: vm.supportTopics[index].image)
-                                            .foregroundColor(vm.supportTopics[index].color)
+                                        Image(systemName: vm.supportTopicsiPhone[index].image)
+                                            .foregroundColor(vm.supportTopicsiPhone[index].color)
                                             .font(.system(size:25))
-                                        Text(vm.supportTopics[index].name)
+                                        Text(vm.supportTopicsiPhone[index].name)
                                         Spacer()
                                         Image(systemName: "chevron.right")
                                             .font(.system(size:12).weight(.light))
@@ -93,10 +92,6 @@ struct MyDevicesView: View {
                         }
                     }
                     .padding()
-//                    }
-//                    .frame(height: rowHeight * CGFloat(vm.supportTopics.count) + 1 + 150)
-//                    .scrollDisabled(true)
-//                    .border(.red)
                 }
                 
                 

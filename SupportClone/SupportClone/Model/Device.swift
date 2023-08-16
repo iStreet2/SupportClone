@@ -12,5 +12,6 @@ struct Device: Identifiable {
     var name: String
     var image: String
     var deviceName: String
+    var type: String
     var id = UUID()
 }

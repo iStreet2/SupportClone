@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 class SupportTopics{
-    static var supportTopics: [SupportTopic] = [
+    static var supportTopicsiPhone: [SupportTopic] = [
         SupportTopic(name: "Repairs & Physical Damage", image: "screwdriver.fill", color: .red),
         SupportTopic(name: "Device Performace", image: "waveform.path.ecg", color: .blue),
         SupportTopic(name: "Subscriptions & Purshaces", image: "creditcard.fill", color: .yellow),
@@ -17,5 +17,7 @@ class SupportTopics{
         SupportTopic(name: "Passwords & Secutiry", image: "lock.fill", color: .blue),
         SupportTopic(name: "Update, Backup & Restore", image: "arrow.counterclockwise.circle.fill", color: .green),
         SupportTopic(name: "More", image: "ellipsis.circle.fill", color: .gray)
+    ]
+    static var supportTopicsMac: [SupportTopic] = [
     ]
 }
