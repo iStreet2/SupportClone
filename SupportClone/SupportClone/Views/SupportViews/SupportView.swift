@@ -10,6 +10,7 @@ import SwiftUI
 struct SupportView: View {
     @EnvironmentObject var vm: ViewModel
     @EnvironmentObject var pm: ProductsViewModel
+    
     @State var showingSheetHelp = false
     @State var showingSheetDevices = false
     @State var showingSheetDevices_iPhone = false
@@ -216,6 +217,15 @@ struct SupportView: View {
                     }.padding(.leading)
                     
                     
+                    ScrollView(.horizontal){
+                        HStack {
+                            ForEach(pm.products.indices, id: \.self) { index in
+                                Image(pm.products[index].prod)
+                                    .resizable()
+                                    .frame(width: 100, height: 100)
+                            }
+                        }
+                    }
                 }
             }
             .navigationTitle("Support")
@@ -227,5 +237,6 @@ struct SupportView_Previews: PreviewProvider {
     static var previews: some View {
         SupportView()
             .environmentObject(ViewModel())
+            .environmentObject(ProductsViewModel())
     }
 }
