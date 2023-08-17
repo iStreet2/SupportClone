@@ -98,6 +98,7 @@ struct SupportView: View {
                         
                         Image(systemName: "chevron.right")
                     }
+                    .padding(.horizontal)
                     
                     //                  Menage Subscription Button
                     Button {
@@ -112,11 +113,11 @@ struct SupportView: View {
                                 .foregroundColor(Color("TextColor"))
                             Spacer()
                         }
-                        .padding(.leading, 24)
-                        .frame(width: 360, height: 70)
+                        .padding()
                         .background(Color("SquaresBG"))
                         .cornerRadius(10)
                     }
+                    .padding(.horizontal)
                     
                     //                  Reset Password Button
                     Button {
@@ -131,11 +132,11 @@ struct SupportView: View {
                                 .foregroundColor(Color("TextColor"))
                             Spacer()
                         }
-                        .padding(.leading, 24)
-                        .frame(width: 360, height: 70)
+                        .padding()
                         .background(Color("SquaresBG"))
                         .cornerRadius(10)
                     }
+                    .padding(.horizontal)
                     
                     //                  Check coverage But
                     Button {
@@ -146,18 +147,19 @@ struct SupportView: View {
                                 .renderingMode(.original)
                                 .foregroundColor(Color(.systemRed))
                                 .font(.largeTitle)
-                                .frame(width: 50, height: 50)
+                                .scaledToFit()
+                                .frame(height: 40)
                                 .background(Color("AppleLogoBG"))
                                 .cornerRadius(10)
                             Text("Cheeck Coverage")
                                 .foregroundColor(Color("TextColor"))
                             Spacer()
                         }
-                        .padding(.leading, 24)
-                        .frame(width: 360, height: 70)
+                        .padding()
                         .background(Color("SquaresBG"))
                         .cornerRadius(10)
                     }
+                    .padding(.horizontal)
                 }
                 
                 Divider()
